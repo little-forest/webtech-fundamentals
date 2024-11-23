@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tiny ToDo</title>
+    <link rel="stylesheet" href="static/todo.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tiny ToDo</h1>Session version
+    </header>
+    <main>
+      <form method="post" action="add"> <!--1-->
+        <input type="text" name="todo" placeholder="Add a new todo" />
+        <button type="submit">Add</button>
+      </form>
+      <ul class="todo-list">
+        {{range .}}
+        <li class="todo-item">
+          <div class="todo-item-left">
+            <input type="checkbox" />
+            <span>{{.}}</span>
+          </div>
+        </li>
+        {{end}}
+      </ul>
+    </main>
+  </body>
+</html>
