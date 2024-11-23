@@ -1,0 +1,50 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  margin: 0;
+}
+
+/* Header */
+header {
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header .info {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+header #info-version {
+  margin-right: auto;
+}
+
+/* Logout button */
+form#logout {
+  margin: 0 0 0 1rem;
+  padding: 0;
+}
+
+form#logout button[type="submit"] {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 3px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+/* Others */
+.monospace {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,81 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  margin: 0;
+}
+
+header {
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 0.8rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+main {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+ul.todo-list {
+  padding-left: 0px;
+}
+
+ul.todo-list li.todo-item {
+  list-style: none;
+  padding: 1.5ex 1em;
+  margin: 1ex 0.5em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+ul.todo-list li.todo-item .todo-item-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+ul.todo-list li.todo-item .todo {
+  flex-grow: 1;
+  border: none;
+  font-size: 1rem;
+  padding: 4px 8px;
+  margin: 2px 8px 2px 4px;
+}
+
+ul.todo-list li.todo-item .todo:focus {
+  outline-color: #dddddd;
+}
+
+form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input[type="text"].new-todo {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: solid;
+  border-color: #ddd;
+  border-radius: 3px 0 0 3px;
+}
+
+button[type="submit"] {
+  background-color: #3f51b5;
+  color: #fff;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #2f3a7d;
+}
+
+.hidden {
+  display: none;
+}

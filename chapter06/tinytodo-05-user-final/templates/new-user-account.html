@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tiny ToDo</title>
+    <link rel="stylesheet" href="static/login.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <h1>Tiny ToDo</h1>
+      <div class="info">
+        <span id="info-version">User management version</span>
+      </div>
+    </header>
+
+    <main id="login">
+      <form class="form-login">
+        アカウントを作成しました。<br>
+        アカウントは60分間有効です。
+        <div class="form-item">
+          <label>UserId</label>
+          <input type="text" name="userId" value="{{ .UserId }}" readonly>
+        </div>
+        <div class="form-item">
+          <label>Password</label>
+          <input type="text" class="monospace" name="password" value="{{ .Password }}" readonly>
+        </div>
+        <div class="form-item">
+          <label>Expires</label>
+          <input type="text" name="expires" value="{{ .Expires }}" readonly>
+        </div>
+        <button class="primary" onclick="location.href='/login'">OK</button>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tiny ToDo</title>
+    <link rel="stylesheet" href="static/login.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <h1>Tiny ToDo</h1>
+      <div class="info">
+        <span id="info-version">User management version</span>
+      </div>
+    </header>
+
+    <main id="login">
+      <form class="form-login" method="post" action="/create-user-account">
+        <h1>New account</h1>
+        
+        <div class="form-item">
+          <label>UserId</label>
+          <input type="text" name="userId" placeholder="User ID" required autofocus>
+          <p class="note">ユーザIDには、アルファベット、数字、記号(+, -, _, @)が利用可能です。</p>
+        </div>
+        {{ if ne .ErrorMessage "" }}
+        <div class="error-message">{{ .ErrorMessage }}</div>
+        {{ end }}
+        <button type="submit">Create</button>
+      </form>
+    </main>
+  </body>
+</html>

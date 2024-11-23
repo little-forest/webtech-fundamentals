@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tiny ToDo</title>
+    <link rel="stylesheet" href="static/todo.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <h1>Tiny ToDo</h1>
+      <div class="info">
+        <span id="info-version">User management version</span>
+        <span id="info-account">User : {{ .UserId }} / Expires : {{ .Expires }}</span>
+        <form id="logout" method="post" action="/logout">
+          <button type="submit">Logout</button>
+        </form>
+      </div>
+    </header>
+    <main>
+      <form class="new-todo" method="post" action="/add">
+        <input type="text" name="todo" placeholder="Add a new ToDo" />
+        <button type="submit">Add</button>
+      </form>
+      <ul class="todo-list">
+        {{range .ToDoList}}
+        <li class="todo-item">
+          <div class="todo-item-left">
+            <input type="checkbox" />
+            <span>{{.}}</span>
+          </div>
+        </li>
+        {{end}}
+      </ul>
+    </main>
+  </body>
+</html>

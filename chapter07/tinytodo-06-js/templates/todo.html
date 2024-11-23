@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="static/todo.css" />
+    <script defer src="static/todo.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>ToDo List</h1>
+    </header>
+    <main>
+      <form method="post" action="add"> <!--1-->
+        <input type="text" class="new-todo" name="todo" placeholder="Add a new todo" />
+        <button type="submit">Add</button>
+      </form>
+      <ul class="todo-list">
+        {{range .}}
+        <li class="todo-item">
+          <div class="todo-item-container">
+            <input type="checkbox" />
+            <input type="text" class="todo" value="{{.}}" readonly />
+            <div class="todo-item-control hidden">
+              <button class="btn-save">save</button>
+              <button class="btn-cancel">cancel</button>
+            </div>
+          </div>
+        </li>
+        {{end}}
+      </ul>
+    </main>
+  </body>
+</html>

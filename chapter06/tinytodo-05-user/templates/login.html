@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tiny ToDo</title>
+    <link rel="stylesheet" href="static/login.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <h1>Tiny ToDo</h1>
+      <div class="info">
+        <span id="info-version">User management version</span>
+      </div>
+    </header>
+
+    <main id="login">
+      <form class="form-login" method="post" action="/login"> <!--4-->
+        <h1>Login</h1>
+
+        <div class="form-item">
+          <label>UserId</label>
+          <input type="text" name="userId" placeholder="User ID" required autofocus> <!--1-->
+        </div>
+
+        <div class="form-item">
+          <label>Password</label>
+          <input type="password" name="password" placeholder="Password" required> <!--2-->
+        </div>
+
+        {{ if ne .ErrorMessage "" }} <!--5-->
+        <div class="error-message">{{ .ErrorMessage }}</div>
+        {{ end }}
+
+        <button type="submit">Login</button> <!--3-->
+
+        <button onclick="location.href='/create-user-account'">Create new account</button>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+@import url("base.css");
+
+.error-message {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  color: #f00;
+  font-weight: bold;
+}
+
+/* Login form */
+main#login {
+  margin: 0 auto;
+  padding: 0.5rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-login {
+  width: 90%;
+  max-width: 400px;
+  padding: 15px;
+  display: flex;
+  flex-flow: column;
+}
+
+@media only screen and (max-width: 599px) {
+  .form-login {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.form-login h1 {
+  width: 100%;
+  padding: 0.5rem 0;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+.form-item {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  margin-top: 1rem;
+}
+
+.form-login .form-item label {
+  font-size: 0.8rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.form-login .form-item input {
+  font-size: 1rem;
+  height: 2rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  padding: 0.2rem 0.75rem;
+}
+
+.form-login .form-item input:focus {
+  outline: 1px solid #0d6efd;
+}
+
+.form-login button {
+  width: 100%;
+  color: #0d6efd;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #0d6efd;
+  border-radius: 0.3rem;
+  font-size: 1.25rem;
+  margin: 1rem 0rem;
+  padding: 0.5rem 1rem;
+  transition: .2s;
+}
+
+.form-login button:hover {
+  color: #ffffff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.form-login .form-item input[readonly],input[readonly]:focus {
+  border: none;
+  outline: none;
+}
+
+.form-login button[type="submit"],button.primary {
+  color: #ffffff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+p.note {
+  font-size: 0.7rem;
+  color: #505050;
+}
+

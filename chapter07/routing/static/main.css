@@ -1,0 +1,46 @@
+body {
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header {
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 0.3rem;
+}
+
+main {
+  padding: 0.5rem;
+}
+
+nav {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  width: 10%;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
