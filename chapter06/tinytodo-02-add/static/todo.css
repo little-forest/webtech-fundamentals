@@ -1,0 +1,65 @@
+/* ページ全体のスタイル */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  margin: 0;
+}
+
+/* ヘッダーのスタイル */
+header {
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 16px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* メインコンテンツのスタイル */
+main {
+  /* max-width: 600px; */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+}
+
+ul.todo-list {
+  padding-left: 0px;
+}
+
+ul.todo-list li.todo-item {
+  list-style: none;
+  padding: 1.5ex 1em;
+  margin: 1ex 0.5em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: solid;
+  border-color: #ddd;
+  border-radius: 3px 0 0 3px;
+}
+
+button[type="submit"] {
+  background-color: #3f51b5;
+  color: #fff;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #2f3a7d;
+}
+
