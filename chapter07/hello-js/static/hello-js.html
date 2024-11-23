@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <body>
+    <input id="arg1" type="text" oninput="calc();"> <!--1-->
+      + <input id="arg2" type="text" oninput="calc();">
+      = <span id="result"></span><br> <!--2-->
+    <script>
+      function calc() {
+        const arg1Value = parseInt(document.getElementById('arg1').value);   // <3>
+        const arg2Value = parseInt(document.getElementById('arg2').value);
+        let result = "";
+        if (!isNaN(arg1Value) && !isNaN(arg2Value)) {
+          result = arg1Value + arg2Value;
+        }
+        document.getElementById('result').innerHTML = result;                // <4>
+        console.log(`calc called : ${arg1Value} + ${arg2Value} = ${result}`) // <5>
+      }
+    </script>
+  </body>
+</html>

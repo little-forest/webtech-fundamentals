@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tiny ToDo</title>
+    <link rel="stylesheet" href="static/todo.css" />
+    <script defer src="static/todo.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <h1>Tiny ToDo</h1>
+      <div class="info">
+        <span id="info-version">Ajax version</span>
+        <span id="info-account">User : {{ .UserId }} / Expires : {{ .Expires }}</span>
+        <form id="logout" method="post" action="/logout">
+          <button type="submit">Logout</button>
+        </form>
+      </div>
+    </header>
+    <main>
+      <form class="new-todo" method="post" action="add">
+        <input type="text" class="new-todo" id="new-todo" name="todo" placeholder="Add a new todo" />
+        <button type="submit">Add</button>
+      </form>
+      <ul class="todo-list">
+        {{range .ToDoList}}
+        <li class="todo-item">
+          <div class="todo-item-container">
+            <input type="checkbox" />
+            <input type="text" class="todo" id="{{.Id}}" value="{{.Todo}}" readonly />  <!--1-->
+            <div class="todo-item-control hidden">
+              <button class="btn-save">save</button>
+              <button class="btn-cancel">cancel</button>
+            </div>
+          </div>
+        </li>
+        {{end}}
+      </ul>
+    </main>
+  </body>
+</html>

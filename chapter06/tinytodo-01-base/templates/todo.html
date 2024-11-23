@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tiny ToDo</title>
+    <link rel="stylesheet" href="static/todo.css" /> <!--4-->
+  </head>
+  <body>
+    <header>
+      <h1>Tiny ToDo</h1>
+    </header>
+    <main>
+      <ul class="todo-list">
+        {{range .}} <!--1-->
+        <li class="todo-item">
+          <div class="todo-item-left">
+            <input type="checkbox" />
+            <label>{{.}}</label> <!--3-->
+          </div>
+        </li>
+        {{end}} <!--2-->
+      </ul>
+    </main>
+  </body>
+</html>

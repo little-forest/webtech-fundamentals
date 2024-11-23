@@ -1,0 +1,60 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #333;
+  margin: 0;
+}
+
+header {
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 0.8rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+#control {
+  padding: 20px 10px 0px 10px;
+}
+
+#calendar-container {
+  margin: 20px;
+  text-align: center;
+}
+
+#error-msg {
+  color: #ff0000;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+table td {
+  cursor: pointer;
+}
+
+table td.today {
+  background-color: #e0f7fa;
+}
+
+#prev-month,
+#next-month {
+  cursor: pointer;
+  font-size: 20px;
+  margin: 10px;
+}
+

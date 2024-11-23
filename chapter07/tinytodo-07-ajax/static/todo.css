@@ -1,0 +1,162 @@
+@import url("base.css");
+
+main {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+ul.todo-list {
+  padding-left: 0px;
+}
+
+ul.todo-list li.todo-item {
+  list-style: none;
+  padding: 1.5ex 1em;
+  margin: 1ex 0.5em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+ul.todo-list li.todo-item .todo-item-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+ul.todo-list li.todo-item .todo {
+  flex-grow: 1;
+  border: none;
+  font-size: 1rem;
+  padding: 4px 8px;
+  margin: 2px 8px 2px 4px;
+}
+
+ul.todo-list li.todo-item .todo:focus {
+  outline-color: #dddddd;
+}
+
+form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+form.new-todo {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+form.new-todo > input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: solid;
+  border-color: #ddd;
+  border-radius: 6px 0 0 6px;
+}
+
+form.new-todo > button[type="submit"] {
+  background-color: #3f51b5;
+  color: #fff;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+form.new-todo >:not(:first-child) {
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+form.new-todo > :not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+form.new-todo >:not(:last-child):focus {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  outline: none;
+  border-color: #3f51b5;
+}
+
+button[type="submit"]:hover {
+  background-color: #2f3a7d;
+}
+
+.error-message {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  color: #fff;
+  background-color: #f00;
+  border-radius: 4px;
+}
+
+/* Login form */
+main#login {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  /* border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+}
+
+.form-signin {
+  width: 90%;
+  max-width: 400px;
+  padding: 15px;
+  display: flex;
+  flex-flow: column;
+}
+
+@media only screen and (max-width: 600px) {
+  .form-signin {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.form-signin .h1 {
+  width: 100%;
+  padding: 15px;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+}
+
+.form-item {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  margin-top: 1rem;
+}
+
+.form-signin .form-item label {
+  font-size: 0.8rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.form-signin .form-item input {
+  font-size: 1rem;
+  height: 2rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  padding: 0.2rem 0.75rem;
+}
+
+.form-signin button {
+  width: 100%;
+  color: #ffffff;
+  background-color: #007bff;
+  border: 1px solid;
+  border-color: #007bff;
+  border-radius: 0.3rem;
+  font-size: 1.25rem;
+  margin: 1rem 0rem;
+  padding: 0.5rem 1rem;
+}
